@@ -1,0 +1,247 @@
+@mainColor:#4db2a4;
+html{
+    height: 410px;
+}
+body{
+    width: 500px;
+}
+*,body,html{
+    margin: 0;
+    padding: 0;
+}
+ul,li{
+    list-style: none;
+}
+input[type="text"],input[type="password"],select{
+    border: 1px solid #ddd;
+    height: 30px;
+    text-indent: 10px;
+    outline: none;
+    border-radius: 5px;
+    width: 200px;
+}
+.error{
+    display: none;
+    color: red;
+    font-size: 12px;
+    background: rgba(255, 0, 0, .2);
+    padding: 5px 0;
+    text-align: center;
+    width: 100vw;
+    float: left;
+}
+.body{
+    >div{
+        width: calc(~"100vw - 20px");
+        float: left;
+        padding: 0 10px;
+    }
+    .nav{
+        height: 20px;
+        line-height: 20px;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        margin-top: 10px;
+        >img{
+            float: left;
+            width: 20px;
+        }
+        >span{
+            float: left;
+            color: #333;
+        }
+        >.user{
+            float: right;
+            margin-right: 10px;
+        }
+    }
+    .tab{
+        width: 100vw;
+        display: none;
+        border-bottom: 1px solid #ddd;
+        >li{
+            width: 50%;
+            float: left;
+            cursor: pointer;
+            transition: all 0.3s;
+            -webkit-transition: all 0.3s;
+            text-align: center;
+            padding: 5px 0;
+        }
+        >li:hover,>li.active{
+            background: @mainColor;
+            color: white;
+        }
+    }
+    .user-form{
+        margin-top: 20px;
+        >p{
+            width: 100vw;
+            margin-left: -10px;
+            margin-top: 10px;
+            padding: 5px 0;
+            text-align: center;
+            // font-size: 14px;
+            color: red;
+            background: rgba(255, 0, 0, .2);
+        }
+        >.taskList{
+            margin-top: 15px;
+        }
+        >div{
+            margin-top: 20px;
+            padding: 0 10px;
+            text-align: center;
+            >span{
+                display: inline-block;
+                width: 100px;
+                text-align: left;
+            }
+            >div{
+                width: 200px;
+                display: inline-block;
+                text-align: left;
+                >span{
+                    margin-left: 10px;
+                }
+                >span:first-child{
+                    margin: 0;
+                }
+                >label{
+                    cursor: pointer;
+                    margin-right: 20px;
+                    display: inline-block;
+                    >input{
+                        margin-right: 5px;
+                    }
+                    >input,>span{
+                        vertical-align: middle;
+                    }
+                }
+            }
+            >p{
+                text-align: left;
+                margin-bottom: 10px;
+                width: 100vw;
+                display: flex;
+                justify-items: center;
+                align-items: center;
+                >i{
+                    font-weight: bold;
+                }
+                >span{
+                    display: inline-block;
+                    width: 350px;
+                }
+                >.taskTitle{
+                    width: 75px;
+                    margin-right: 5px;
+                    text-align: center;
+                    padding: 5px;
+                    color: @mainColor;
+                    background: rgba(77, 178, 164, .2);
+                }
+                >.downLoad{
+                    cursor: pointer;
+                }
+                >.downLoad:hover{
+                    color: @mainColor;
+                    text-decoration: underline;
+                }
+            }
+            #listContent{
+                width: 100%;
+                height: 200px;
+                border: 1px solid #ddd;
+                overflow-y: auto;
+                >p{
+                    padding: 5px 10px;
+                    border-bottom: 1px solid #ddd;
+                }
+                >p:last-child{
+                    border: none;
+                }
+                >p:nth-child(2n+1){
+                    background: rgba(77, 178, 164, .2);
+                }
+            }
+            #listContent::-webkit-scrollbar{
+                width: 10px;
+                border-radius: 10px;
+                background: #ddd;
+            }
+            #listContent::-webkit-scrollbar-button{
+                display: none;
+            }
+            #listContent::-webkit-scrollbar-thumb{
+                background: rgba(0,0,0, .2);
+                // width: 5px;
+                border-radius: 10px;
+            }
+        }
+        .submit{
+            margin-top: 150px;
+            >button{
+                cursor: pointer;
+                border: none;
+                border-radius: 5px;
+                background: @mainColor;
+                color: #fff;
+                outline: none;
+                font-size: 13px;
+                padding: 10px 20px;
+            }
+            button.active{
+                background: gray;
+                cursor: not-allowed;
+            }
+        }
+    }
+    #taskList{
+        margin: 0;
+    }
+}
+.layui-laydate-range{
+    width: 200px !important;
+}
+.layui-laydate{
+    box-shadow: none !important;
+}
+.laydate-theme-molv{
+    .layui-laydate-main{
+        width: 233px !important;
+        transform: scale(0.85);
+    }
+    .laydate-main-list-0{
+        margin-left: -16px;
+        margin-top: -25px;
+        .laydate-next-m,.laydate-next-y{
+            display: inline-block !important;
+        }
+    }
+    .laydate-main-list-1{
+        display: none !important;
+    }
+}
+.layui-laydate-footer{
+    margin-top: -23px !important;
+    width: 199px !important;
+    margin-left: 1px !important;
+}
+.laydate-next-y{
+    display: none !important;
+}
+.laydate-set-ym{
+    span{
+        cursor: default !important;
+    }
+}
+.layui-laydate-header{
+    padding: 10px 50px 5px !important;
+    i.laydate-prev-m{
+        left: 35px !important;
+    }
+    i.laydate-next-m{
+        right: 35px !important;
+    }
+}

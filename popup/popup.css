@@ -1,0 +1,246 @@
+html {
+  height: 410px;
+}
+body {
+  width: 500px;
+}
+*,
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+input[type="text"],
+input[type="password"],
+select {
+  border: 1px solid #ddd;
+  height: 30px;
+  text-indent: 10px;
+  outline: none;
+  border-radius: 5px;
+  width: 200px;
+}
+.error {
+  display: none;
+  color: red;
+  font-size: 12px;
+  background: rgba(255, 0, 0, 0.2);
+  padding: 5px 0;
+  text-align: center;
+  width: 100vw;
+  float: left;
+}
+.body > div {
+  width: calc(100vw - 20px);
+  float: left;
+  padding: 0 10px;
+}
+.body .nav {
+  height: 20px;
+  line-height: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  margin-top: 10px;
+}
+.body .nav > img {
+  float: left;
+  width: 20px;
+}
+.body .nav > span {
+  float: left;
+  color: #333;
+}
+.body .nav > .user {
+  float: right;
+  margin-right: 10px;
+}
+.body .tab {
+  width: 100vw;
+  display: none;
+  border-bottom: 1px solid #ddd;
+}
+.body .tab > li {
+  width: 50%;
+  float: left;
+  cursor: pointer;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  text-align: center;
+  padding: 5px 0;
+}
+.body .tab > li:hover,
+.body .tab > li.active {
+  background: #4db2a4;
+  color: white;
+}
+.body .user-form {
+  margin-top: 20px;
+}
+.body .user-form > p {
+  width: 100vw;
+  margin-left: -10px;
+  margin-top: 10px;
+  padding: 5px 0;
+  text-align: center;
+  color: red;
+  background: rgba(255, 0, 0, 0.2);
+}
+.body .user-form > .taskList {
+  margin-top: 15px;
+}
+.body .user-form > div {
+  margin-top: 20px;
+  padding: 0 10px;
+  text-align: center;
+}
+.body .user-form > div > span {
+  display: inline-block;
+  width: 100px;
+  text-align: left;
+}
+.body .user-form > div > div {
+  width: 200px;
+  display: inline-block;
+  text-align: left;
+}
+.body .user-form > div > div > span {
+  margin-left: 10px;
+}
+.body .user-form > div > div > span:first-child {
+  margin: 0;
+}
+.body .user-form > div > div > label {
+  cursor: pointer;
+  margin-right: 20px;
+  display: inline-block;
+}
+.body .user-form > div > div > label > input {
+  margin-right: 5px;
+}
+.body .user-form > div > div > label > input,
+.body .user-form > div > div > label > span {
+  vertical-align: middle;
+}
+.body .user-form > div > p {
+  text-align: left;
+  margin-bottom: 10px;
+  width: 100vw;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+.body .user-form > div > p > i {
+  font-weight: bold;
+}
+.body .user-form > div > p > span {
+  display: inline-block;
+  width: 350px;
+}
+.body .user-form > div > p > .taskTitle {
+  width: 75px;
+  margin-right: 5px;
+  text-align: center;
+  padding: 5px;
+  color: #4db2a4;
+  background: rgba(77, 178, 164, 0.2);
+}
+.body .user-form > div > p > .downLoad {
+  cursor: pointer;
+}
+.body .user-form > div > p > .downLoad:hover {
+  color: #4db2a4;
+  text-decoration: underline;
+}
+.body .user-form > div #listContent {
+  width: 100%;
+  height: 200px;
+  border: 1px solid #ddd;
+  overflow-y: auto;
+}
+.body .user-form > div #listContent > p {
+  padding: 5px 10px;
+  border-bottom: 1px solid #ddd;
+}
+.body .user-form > div #listContent > p:last-child {
+  border: none;
+}
+.body .user-form > div #listContent > p:nth-child(2n+1) {
+  background: rgba(77, 178, 164, 0.2);
+}
+.body .user-form > div #listContent::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 10px;
+  background: #ddd;
+}
+.body .user-form > div #listContent::-webkit-scrollbar-button {
+  display: none;
+}
+.body .user-form > div #listContent::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+.body .user-form .submit {
+  margin-top: 150px;
+}
+.body .user-form .submit > button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background: #4db2a4;
+  color: #fff;
+  outline: none;
+  font-size: 13px;
+  padding: 10px 20px;
+}
+.body .user-form .submit button.active {
+  background: gray;
+  cursor: not-allowed;
+}
+.body #taskList {
+  margin: 0;
+}
+.layui-laydate-range {
+  width: 200px !important;
+}
+.layui-laydate {
+  box-shadow: none !important;
+}
+.laydate-theme-molv .layui-laydate-main {
+  width: 233px !important;
+  transform: scale(0.85);
+}
+.laydate-theme-molv .laydate-main-list-0 {
+  margin-left: -16px;
+  margin-top: -25px;
+}
+.laydate-theme-molv .laydate-main-list-0 .laydate-next-m,
+.laydate-theme-molv .laydate-main-list-0 .laydate-next-y {
+  display: inline-block !important;
+}
+.laydate-theme-molv .laydate-main-list-1 {
+  display: none !important;
+}
+.layui-laydate-footer {
+  margin-top: -23px !important;
+  width: 199px !important;
+  margin-left: 1px !important;
+}
+.laydate-next-y {
+  display: none !important;
+}
+.laydate-set-ym span {
+  cursor: default !important;
+}
+.layui-laydate-header {
+  padding: 10px 50px 5px !important;
+}
+.layui-laydate-header i.laydate-prev-m {
+  left: 35px !important;
+}
+.layui-laydate-header i.laydate-next-m {
+  right: 35px !important;
+}

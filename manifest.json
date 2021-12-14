@@ -1,0 +1,65 @@
+{
+	"manifest_version": 2,
+	"name": "Amazon Tools",
+	"version": "1.0.0",
+	"description": "亚马逊报表下载插件",
+	"icons":
+	{
+		"16": "img/icon.png",
+		"48": "img/icon.png",
+		"128": "img/icon.png"
+	},
+	"background":
+	{
+		"scripts": ["lib/jquery-2.2.0.min.js","background/background.js"]
+	},
+	"page_action":
+	{
+		"default_icon": "img/icon.png",
+		"default_title": "我是pageAction",
+		"default_popup": "popup/popup.html"
+	},
+	"content_scripts": 
+	[
+		{
+			"matches": [
+				"*://sellercentral.amazon.com/*",
+				"*://sellercentral.amazon.co.uk/*",
+				"*://sellercentral.amazon.de/*",
+				"*://sellercentral.amazon.fr/*",
+				"*://sellercentral.amazon.pl/*",
+				"*://sellercentral.amazon.it/*",
+				"*://sellercentral.amazon.es/*",
+				"*://sellercentral.amazon.nl/*",
+				"*://sellercentral.amazon.ca/*",
+				"*://sellercentral.amazon.com.br/*",
+				"*://sellercentral.amazon.com.mx/*",
+				"*://sellercentral.amazon.com.au/*",
+				"*://sellercentral.amazon.sg/*",
+				"*://sellercentral-japan.amazon.com/*"
+			],
+			"js": ["lib/jquery-2.2.0.min.js", "contentScript/content-script.js"],
+			"run_at": "document_start"
+		}
+	],
+	"permissions":
+	[
+		"experimental",
+		{"socket": ["tcp-connect:*:*"]},
+		"notifications",
+		"storage", 
+		"downloads",
+		"webNavigation",
+		"contextMenus",
+		"declarativeContent",
+		"tabs",
+		"notifications", 
+		"webRequest", 
+		"webRequestBlocking",
+		"http://*/*", 
+		"https://*/*"
+	],
+	"homepage_url": "https://sellercentral.amazon.com",
+	
+	"default_locale": "zh_CN"
+}

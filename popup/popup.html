@@ -1,0 +1,81 @@
+<!--
+ * @Author: Pony
+ * @Date: 2021-09-02 17:48:44
+ * @LastEditors: pony
+ * @LastEditTime: 2021-09-03 10:04:29
+ * @FilePath: \chrome-tool-test\popup.html
+-->
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="popup.css">
+    </head>
+    <body>
+        <div class="body">
+            <div class="nav">
+                <img src="/img/icon.png" alt="">
+                <span>亚马逊报表自动化下载管理器</span>
+                <span id="user" class="user"></span>
+            </div>
+            <!-- 提示 -->
+            <p class="error"></p>
+            <!-- 登录 -->
+            <div id="login-body" class="user-form">
+                <div class="phoneNumber">
+                    <span>账号：</span>
+                    <input id="phone" type="text" value="13760279085" placeholder="请输入手机号"/>
+                </div>
+                <div class="pwd">
+                    <span>密码：</span>
+                    <input id="pwd" type="password" value="123456" placeholder="请输入密码"/>
+                </div>
+                <div class="submit">
+                    <button id="login">登录</button>
+                </div>
+            </div>
+            <!-- 切换 -->
+            <ul class="tab">
+                <li class="active" bind-data="amazon-body">生成任务</li>
+                <li id="tab-taskList" bind-data="taskList">任务列表</li>
+            </ul>
+            <!-- 生成任务 -->
+            <div id="amazon-body" class="user-form" style="display: none;">
+                <!-- <div class="sellerId">
+                    <span>SellerId：</span><input id="sellerid" type="text" disabled />
+                </div> -->
+                <div class="date" style="margin-top: 0;">
+                    <span>请选择日期：</span>
+                    <input type="text" class="demo-input" placeholder="日期范围" id="date">
+                </div>
+                <div class="country">
+                    <span>国家店铺列表：</span>
+                    <div id="countrys">
+
+                    </div>
+                    <!-- <select id="country"></select> -->
+                </div>
+                <div class="submit">
+                    <button id="running">生成任务</button>
+                </div>
+            </div>
+
+            <!-- 任务列表 -->
+            <div id="taskList" class="user-form" style="display: none;">
+                <div class="taskList">
+                    <p><span class="taskTitle">任务列表</span>剩余&nbsp;<i id="taskNum">0</i>&nbsp;个</p>
+                    <p><span class="taskTitle">当前下载任务</span><span id="curTask"></span></p>
+                   <p><span class="taskTitle">已下载任务</span></p>
+                    <div id="listContent">
+                    </div>
+                </div>
+                <p>注：任务已经开始下载，请暂时停止切换站点操作~</p>
+            </div>
+            <!-- 已上传列表 -->
+            
+        </div>
+    </body>
+</html>
+<script src="/lib/jquery-2.2.0.min.js"></script>
+<script src="/lib/laydate/laydate.js"></script>
+<script src="/popup/popup.js"></script>
